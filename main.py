@@ -27,13 +27,6 @@ def home():
 
         # Retrieve form data -------------------------------------------------------------------------------------------
         colours_num = int(request.form["colours_num"])
-        # print(colours_num)
-        # precision = request.form["precision"]
-        # print(precision)
-        # brightness = request.form.get("brightness")
-        # print(brightness)
-        # gradient = request.form.get("gradient")
-        # print(gradient)
 
         # Create ColourExtractor object --------------------------------------------------------------------------------
         extractor = ColourExtractor()
