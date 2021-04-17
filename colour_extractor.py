@@ -60,7 +60,6 @@ class ColourExtractor:
         list_of_pixels = self.resized_image.reshape(
             self.resized_image.shape[0] * self.resized_image.shape[1], self.resized_image.shape[2]
         )
-        print(type(list_of_pixels))
         # Find the most frequent(dominant) colours
         # return self.find_dominant_colours1(list_of_pixels, colours_num)
         return self.find_dominant_colours2(list_of_pixels, colours_num)
@@ -146,7 +145,7 @@ class ColourExtractor:
 
 
 # extractor = ColourExtractor()
-# extractor.load_image("static/img/cyberpunk_finished.png")
+# extractor.load_image("static/img/fox.jpg")
 # # extractor.show_image(image=extractor.image)
 # extractor.resize_image()
 # # extractor.show_image(image=extractor.resized_image)

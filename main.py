@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect, url_for, session
+from flask import Flask, render_template, request, flash, session
 from flask_bootstrap import Bootstrap
 import os
 from werkzeug.utils import secure_filename
@@ -26,9 +26,8 @@ def home():
         print(path)
 
         # Retrieve form data -------------------------------------------------------------------------------------------
-        # print(file)
         colours_num = int(request.form["colours_num"])
-        print(colours_num)
+        # print(colours_num)
         # precision = request.form["precision"]
         # print(precision)
         # brightness = request.form.get("brightness")
@@ -44,7 +43,6 @@ def home():
 
         flash("Colours extracted successfully.")
         return render_template("colours.html", form=colour_form, colours=colours, image=path)
-        # return redirect(url_for("home"))
 
     return render_template("colours.html", form=colour_form, colours=None, image=None)
 
